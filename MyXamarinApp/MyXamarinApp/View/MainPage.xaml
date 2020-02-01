@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyXamarinApp"
+             x:Class="MyXamarinApp.MainPage">
+    <ListView ItemsSource ="{Binding newsApi}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Margin="0,0,0,17">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2000" />
+                            <ColumnDefinition Width="2000" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout BackgroundColor="Black" Orientation="Vertical">
+
+
+                            <Label Text="Artikel ID:" FontSize="Medium" TextColor="Red"/>
+                            <Label Text="{Binding id}" FontSize="Micro" TextColor="Yellow" />
+                            <Label Text="Plats, tid och datum:" FontSize="Medium" TextColor="Red"/>
+                            <Label Text="{Binding name} " FontSize="Micro" TextColor="Yellow"></Label>
+                            <Label Text="Exakta datumet:" FontSize="Medium" TextColor="Red" />
+                            <Label Text="{Binding datetime}" FontSize="Micro" TextColor="Yellow"></Label>
+                            <Label Text="Kort förklaring om händelsen:" FontSize="Medium" TextColor="Red"/>
+                            <Label Text="{Binding summary}" FontSize="Micro" TextColor="Yellow"></Label>
+                            <Label Text="Händelsetyp:" FontSize="Medium" TextColor="Red" />
+                            <Label Text="{Binding type}" FontSize="Micro" TextColor="Yellow"></Label>
+
+
+                    </StackLayout>
+                    </Grid>
+                   
+                </ViewCell> 
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
